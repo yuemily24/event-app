@@ -1,0 +1,102 @@
+\***INTRODUCTION***\
+Assignment for my CSC207: Software Design course at the University of Toronto, for which I received an A in.
+
+Backend and text UI for a conference/event-scheduling program, where there are organizers, speakers, and attendees.
+For instance, a tech conference, a TED-style conference, an employment fair, etc.
+
+This project demonstrates my understanding of:
+-	Clean architecture
+-	SOLID design principles
+-	Builder design pattern
+-	Abstraction
+-	Polymorphism
+-	Encapsulation
+-	Object-oriented programming
+
+\***INVARIANTS***\
+- Usernames are alphanumeric.
+- Events have no time limit, and can be multi-day.
+- All database collections have already been pre-created through the MongoDB command shell.
+
+\***SPECIFICATIONS***\
+
+USERS
+Organizers of the conference can create events and rooms in the system to host talks in, as well as create any type of
+account. They also have the ability to schedule speakers and to cancel or reschedule an event before it happens. Their
+administrative powers allow them to view a summary stats statistics menu, which includes data on user activation
+summary, organizer/speaker popularity, and event popularity.
+
+Speakers at the conference can preview a list of talks that they are giving. They can also message all Attendees who are
+signed up for a particular event, at once or individually.
+
+Attendees can sign up for events, cancel their enrolment in an event, see the schedule of the events for which they
+signed up, as well as download in an HTML file of this information. To network, they are able to send messages to and
+receive messages from other Attendees/VIP-attendees, and message with Speakers. The program will also provide them with
+a list of recommended contacts, which is based off of other users that are signed up for similar events. This allows
+them to easily network and message users who display similar interests in events.
+
+VIP-attendees share the same functionalities as Attendees, except they additionally have access to VIP-only events that
+only appear to them.
+
+EVENT SYSTEM
+Each event has a maximum number of people who can attend it. This amount can be set when the event is created and also
+changed later, by an organizer. The program will check the maximum capacity for the room where the event will be held,
+and prevent the number of attendees from going above the room's capacity.
+
+Events can have multiple speakers, like a panel discussion, and no-speaker events, like a party. Events can last as
+long as specified.
+During sign-up, if an event is full, users will be automatically asked if they want to be waitlisted. When a user is
+moved off of an event waitlist, the system will automatically notify them with a message that they have been
+successfully moved onto the signup list for an event.
+
+MESSAGING SYSTEM
+Each user has an inbox allowing them to communicate with others. Within this inbox, they can "mark as unread", delete,
+or archive messages after reading them. There are a few general guidelines to this experience:
+-	Speakers can send a message that automatically goes to all Attendees of their talk or multiple talks that they gave.
+-	Organizers can send a message to all speakers, one specific speaker, all Attendees, or one specific Attendee.
+-	Attendees/VIP-Attendees can message other Attendees/VIP-Attendees or Speakers. If the recipient is another type of
+attendee, both of them need to have each other added in their contact lists to initiate a conversation.
+-	If a conversation has been established between 2 users, then they can always continue messaging each other,
+regardless of other factors (e.g. in Event or not, in contact list or not).
+
+\***PRE-CREATED ACCOUNTS TO DEMO WITH:***\
+Organizers (3):
+    Organizer1
+        Username: org1
+        Password: org1
+    Organizer2
+        Username: org2
+        Password: org2
+    Organizer3
+        Username: org3
+        Password: org3
+Attendees (3):
+    Attendee1
+        Username: att1
+        Password: att1
+    Attendee2
+        Username: att2
+        Password: att2
+    Attendee3
+        Username: att3
+        Password: att3
+Speakers (3):
+    Speaker1
+        Username: spk1
+        Password: spk1
+    Speaker2
+        Username: spk2
+        Password: spk2
+    Speaker3
+        Username: spk3
+        Password: spk3
+VIP-Attendees (3):
+    VIPAttendee1
+        Username: vip1
+        Password: vip1
+    VIPAttendee2
+        Username: vip2
+        Password: vip2
+    VIPAttendee3
+        Username: vip3
+        Password: vip3
