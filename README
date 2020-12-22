@@ -1,5 +1,5 @@
 \***INTRODUCTION***\
-Assignment for my CSC207: Software Design course at the University of Toronto, for which I received an A in.
+Assignment for my CSC207: Software Design course at the University of Toronto.
 
 Backend and text UI for a conference/event-scheduling program, where there are organizers, speakers, and attendees.
 For instance, a tech conference, a TED-style conference, an employment fair, etc.
